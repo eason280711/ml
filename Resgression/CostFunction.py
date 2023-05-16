@@ -7,8 +7,8 @@ from mpl_toolkits.mplot3d import Axes3D
 url = "https://raw.githubusercontent.com/eason280711/ml/main/Data/student_study_hours_vs_grades.csv"
 df = pd.read_csv(url)
 
-x = df["Study Hours"].values
-y = df["Grade"].values
+x = df["Study Hours"]
+y = df["Grade"]
 
 # Cost Function
 def cost_function(x, y, w, b):
@@ -17,7 +17,7 @@ def cost_function(x, y, w, b):
 
 # Calculate cost for a range of w values (b fixed)
 b_fixed = 10
-w_values = np.arange(-100, 101) # Adjust the range and number of w values as needed
+w_values = np.arange(-50, 51) # Adjust the range and number of w values as needed
 costs_w = [cost_function(x, y, w, b_fixed) for w in w_values]
 
 # Find minimum cost and its corresponding w
@@ -35,8 +35,8 @@ plt.grid(True)
 plt.show()
 
 # Calculate cost for a range of w and b values
-w_values = np.arange(-100, 101)
-b_values = np.arange(-100, 101)
+w_values = np.arange(-50, 51)
+b_values = np.arange(-50, 51)
 costs_wb = np.zeros((len(w_values), len(b_values)))
 
 for i, w in enumerate(w_values):

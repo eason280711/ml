@@ -29,8 +29,8 @@ plt.show()
 
 # Linear Regression: y = wx + b
 
-w = 10
-b = 10
+w = 5
+b = 5
 
 y_pred = x*w + b
 
